@@ -6,6 +6,12 @@ Easy Switch - an easy switch widget for Flutter. Simple and good looking.
 
 
 
+## Preview
+
+![](https://media1.giphy.com/media/xmiaZ0wYlN8Hhh6HGr/giphy.gif)
+
+
+
 ## How to use
 
 ```dart
