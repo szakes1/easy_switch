@@ -1,8 +1,7 @@
 name: easy_switch
 description: Easy Switch - an easy switch widget for Flutter.
 version: 0.0.1
-author:
-homepage:
+repository: https://github.com/szakes1/easy_switch
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
