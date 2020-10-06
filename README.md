@@ -1,14 +1,44 @@
 # easy_switch
 
-A new Flutter package project.
+## About
 
-## Getting Started
+Easy Switch - an easy switch widget for Flutter. Simple and good looking. 
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+
+## How to use
+
+```dart
+class HomeScreen extends StatefulWidget {
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+
+  bool status = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Easy Switch Example'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            EasySwitch(
+              activeColor: Colors.pink,
+              inactiveColor: Colors.grey
+              value: status,
+              onChanged: (value) {},
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
