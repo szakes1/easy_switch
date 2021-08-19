@@ -3,13 +3,13 @@ library easy_switch;
 import 'package:flutter/material.dart';
 
 class EasySwitch extends StatefulWidget {
-  final bool value;
-  final ValueChanged<bool> onChanged;
-  final Color activeColor;
-  final Color inactiveColor;
+  final bool? value;
+  final ValueChanged<bool>? onChanged;
+  final Color? activeColor;
+  final Color? inactiveColor;
 
   EasySwitch({
-    Key key,
+    Key? key,
     this.value,
     this.onChanged,
     this.activeColor,
@@ -22,8 +22,8 @@ class EasySwitch extends StatefulWidget {
 
 class _EasySwitchState extends State<EasySwitch>
     with SingleTickerProviderStateMixin {
-  AnimationController _animationController;
-  Animation _circleAnimation;
+  late AnimationController _animationController;
+  late Animation _circleAnimation;
 
   @override
   void initState() {
@@ -33,8 +33,8 @@ class _EasySwitchState extends State<EasySwitch>
         AnimationController(vsync: this, duration: Duration(milliseconds: 50));
 
     _circleAnimation = AlignmentTween(
-            begin: widget.value ? Alignment.centerRight : Alignment.centerLeft,
-            end: widget.value ? Alignment.centerLeft : Alignment.centerRight)
+            begin: widget.value! ? Alignment.centerRight : Alignment.centerLeft,
+            end: widget.value! ? Alignment.centerLeft : Alignment.centerRight)
         .animate(CurvedAnimation(
             parent: _animationController, curve: Curves.linear));
   }
@@ -52,8 +52,8 @@ class _EasySwitchState extends State<EasySwitch>
               _animationController.forward();
             }
             widget.value == false
-                ? widget.onChanged(true)
-                : widget.onChanged(false);
+                ? widget.onChanged!(true)
+                : widget.onChanged!(false);
           },
           child: Container(
             width: 70,

@@ -9,3 +9,7 @@
 ## [0.0.3] - Official Release: October 23rd, 2020.
 
 * Changed license from GPL v. 3 to MIT
+
+## [1.0.0] - Official Release: August 19th, 2021.
+
+* Upgraded to support null safety
